@@ -1,6 +1,15 @@
 body {
   box-sizing: border-box;
+  background-color: #EDECED;
+  /*font-family: 'Roboto', sans-serif;*/
+  font-family: 'Montserrat', sans-serif;
   /*font-family: 'Roboto Mono', monospace;*/
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  height: 90px;
 }
 
 .user-info {
@@ -9,16 +18,14 @@ body {
   margin-right: 2%;
   align-items: center;
 }
-.wrapper {
-  display: flex;
-  justify-content: space-between;
-  height: 90px;
-}
+
 header {
-  background-color: #656977;
+  background-color: #262626;
   height: 10%;
   max-width: 1200px;
   margin: 0 auto;
+  color: #fff;
+  font-weight: 300;
  
 }
 
@@ -30,6 +37,7 @@ h1 {
 
 .reminder {
   display: inline-block;
+  vertical-align: unset;
 }
 
 .blue-user {
@@ -60,13 +68,28 @@ h1 {
   height: 20px;
 }
 
+.share-div {
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+img {
+  display: inline-block;
+  vertical-align: middle;
+}
 h2 {
   font-size: 1em;
   margin: 0;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .playlist {
   height: 20px;
+}
+
+.playlist-div {
+  margin-right: 10px;
 }
 
 .user {
@@ -85,37 +108,20 @@ h2 {
 
 .container {
   display: grid;
-/*  grid-template-columns: 200px 200px 200px 100px;
-  grid-template-rows: 400px 400px;
-  grid-gap: 2%;
-
-  grid-template-areas: 
-  
-  ".box1 .box2 .box3 .box4"
-  ".box5 .box6 .box7 .box8";
-
-}*/
-
-/*.container {*/
-  /*border: 1px dashed;*/
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-template-rows: 1fr 1fr;
   grid-gap: 5px;
   grid-auto-flow: dense;
-
 }
-
 
 .box {
   font-family: 'Poppins', sans-serif;
-  /*font-size: 3em;*/
   width: 100%;
   margin: 5px;
-  /*text-align: center;*/
   color: black;
+  background-color: #fff;
   border: 1px solid black;
-
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 }
 
@@ -207,7 +213,10 @@ h2 {
   align-self: flex-end;
   text-align: right;
   padding: 2% 2% 0 0;
+}
 
+.keep-right p {
+  color: black;
 }
 
 .views {
@@ -226,6 +235,7 @@ h2 {
 .card-data {
   text-align: left;
   margin-left: 2%;
+  background-color: #fff;
 }
 
 .name {
@@ -269,51 +279,38 @@ h2 {
   margin: 0;
 }
 
-.box1 {
-  width: 100%;
-  /*height: 150px;*/
-/*  grid-column: 1/2;
-  grid-row: 1/2;*/
+@media screen and (max-width: 550px) {
+  .left-side img {
+  display: block;
+  margin: 0px auto;
+  }
 }
 
-.box2 {
-  /*background-color: #e67e22;*/
-/*  grid-column: 2/3;
-  grid-row: 1/2;*/
-}
+@media screen and (max-width: 480px) {
+  h2 {
+    display: none;
+  }
 
-.box3 {
-  /*background-color: #f39c12;*/
-/*  grid-column: 3/4;
-  grid-row: 1/2;*/
-}
+  .share,
+  .playlist,
+  .user {
+    width: 30px;
+    height: 30px;
+  }
 
-.box4 {
-  /*background-color: #f1c40f;*/
-/*  grid-column: 4/5;
-  grid-row: 1/2;*/
-}
+  .blue-user {
+    width: 30px;
+    height: 30px;
+  }
+  .box {
+    margin: 0;
+  }
 
-.box5 {
-  /*background-color: #2ecc71;*/
-/*  grid-column: 1/2;
-  grid-row: 2/3;*/
-}
+  .right-bottom  {
+    margin-top: 15px;
+  }
 
-.box6 {
-  /*background-color: #1abc9c;*/
-/*  grid-column: 2/3;
-  grid-row: 2/3;*/
-}
-
-.box7 {
-  /*background-color: #3498db;*/
-/*  grid-column: 3/4;
-  grid-row: 2/3;*/
-}
-
-.box8 {
-  /*background-color: #2980b9;*/
-/*  grid-column: 4/5;
-  grid-row: 2/3;*/
+  /*.user-info {
+    margin: 2% 2% 0 0;
+  }*/
 }
