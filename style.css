@@ -1,9 +1,7 @@
 body {
   box-sizing: border-box;
   background-color: #EDECED;
-  /*font-family: 'Roboto', sans-serif;*/
   font-family: 'Montserrat', sans-serif;
-  /*font-family: 'Roboto Mono', monospace;*/
 }
 
 .wrapper {
@@ -95,10 +93,7 @@ h2 {
 .user {
   height: 20px;
 }
-/*.bottom-of-header-right {
-  display: flex;
-  justify-content: flex-end;
-}*/
+
 .outside-container {
   display: flex;
   flex-direction: column;
